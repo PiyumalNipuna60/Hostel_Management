@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1093.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KeyPaymentFormController">
+   <children>
+      <ImageView fitHeight="477.0" fitWidth="1069.0" layoutX="14.0" layoutY="14.0" opacity="0.6">
+         <image>
+            <Image url="@assets/image/z_gradient.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="289.0" layoutX="27.0" layoutY="27.0">
+         <image>
+            <Image url="@assets/image/Screenshot11.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblKeyPayments" layoutX="125.0" layoutY="85.0" opacity="0.67" prefHeight="393.0" prefWidth="839.0">
+         <columns>
+            <TableColumn fx:id="colResId" prefWidth="99.0" text="Reservation ID" />
+            <TableColumn fx:id="colStudentID" prefWidth="128.0" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="118.0" text="Student Name" />
+            <TableColumn fx:id="colRoomId" prefWidth="115.0" text="Room ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="148.0" text="Room Type" />
+            <TableColumn fx:id="colStatus" prefWidth="117.0" text="Status" />
+            <TableColumn fx:id="colOption" prefWidth="113.0" text="Update" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
