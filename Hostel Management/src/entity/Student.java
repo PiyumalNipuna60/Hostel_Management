@@ -1,5 +1,12 @@
 package entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -7,6 +14,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Entity
 public class Student {
     @Id
@@ -19,19 +31,6 @@ public class Student {
 
     @OneToMany(mappedBy = "student_id")
     List<Reservation> reservation_list=new ArrayList();
-
-    public Student() {
-    }
-
-    public Student(String student_id, String name, String address, String contact, Date date, String gender, List<Reservation> reservation_list) {
-        this.student_id = student_id;
-        this.name = name;
-        this.address = address;
-        this.contact = contact;
-        this.date = date;
-        this.gender = gender;
-        this.reservation_list = reservation_list;
-    }
 
     public String getStudent_id() {
         return student_id;

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="1093.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserManagementFormController">
+<AnchorPane prefHeight="538.0" prefWidth="1107.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserManagementFormController">
    <children>
       <ImageView fitHeight="476.0" fitWidth="574.0" layoutX="514.0" layoutY="14.0">
          <image>
@@ -48,13 +48,13 @@
             </JFXTextField>
          </children>
       </AnchorPane>
-      <TableView fx:id="tblUser" layoutX="571.0" layoutY="106.0" opacity="0.67" prefHeight="371.0" prefWidth="494.0">
+      <TableView fx:id="tblUser" layoutX="504.0" layoutY="106.0" opacity="0.67" prefHeight="412.0" prefWidth="574.0">
          <columns>
-            <TableColumn fx:id="colNIC" prefWidth="98.0" text="NIC" />
-            <TableColumn fx:id="colName" prefWidth="96.0" text="Name" />
-            <TableColumn fx:id="colUsername" prefWidth="133.0" text="User Name" />
-            <TableColumn fx:id="userPassword" prefWidth="85.0" text="Password" />
-            <TableColumn fx:id="colOption" prefWidth="81.0" text="---" />
+            <TableColumn fx:id="colNIC" prefWidth="125.0" text="NIC" />
+            <TableColumn fx:id="colName" prefWidth="114.0" text="Name" />
+            <TableColumn fx:id="colUsername" prefWidth="139.0" text="User Name" />
+            <TableColumn fx:id="userPassword" prefWidth="112.0" text="Password" />
+            <TableColumn fx:id="colOption" prefWidth="83.0" text="---" />
          </columns>
       </TableView>
       <AnchorPane layoutX="77.0" layoutY="303.0" prefHeight="49.0" prefWidth="371.0" style="-fx-border-color: #EDEDF0; -fx-border-width: 1.5; -fx-border-radius: 5; -fx-background-radius: 5;">

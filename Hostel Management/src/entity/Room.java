@@ -1,11 +1,23 @@
 package entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@Data
 @Entity
 public class Room {
     @Id
@@ -16,17 +28,6 @@ public class Room {
 
     @OneToMany(mappedBy = "room_type_id")
     List<Reservation> reservation_list=new ArrayList();
-
-    public Room() {
-    }
-
-    public Room(String room_type_id, String type, String key_money, int qty, List<Reservation> reservation_list) {
-        this.room_type_id = room_type_id;
-        this.type = type;
-        this.key_money = key_money;
-        this.qty = qty;
-        this.reservation_list = reservation_list;
-    }
 
     public Room(String room_type_id, String type, String key_money, int qty) {
     }

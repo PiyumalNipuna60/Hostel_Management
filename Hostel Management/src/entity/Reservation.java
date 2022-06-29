@@ -1,10 +1,20 @@
 package entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.Date;
-
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Entity
 public class Reservation {
     @Id
@@ -17,17 +27,6 @@ public class Reservation {
 
     @ManyToOne
     Student student_id;
-
-    public Reservation() {
-    }
-
-    public Reservation(String res_id, Date date, String status, Room room_type_id, Student student_id) {
-        this.res_id = res_id;
-        this.date = date;
-        this.status = status;
-        this.room_type_id = room_type_id;
-        this.student_id = student_id;
-    }
 
     public String getRes_id() {
         return res_id;
