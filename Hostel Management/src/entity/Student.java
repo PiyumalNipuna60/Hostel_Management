@@ -1,5 +1,6 @@
 package entity;
 
+import dto.StudentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -31,6 +33,25 @@ public class Student {
 
     @OneToMany(mappedBy = "student_id")
     List<Reservation> reservation_list=new ArrayList();
+
+    public Student(String student_id, String name, String address, String contact, Date date, String gender) {
+        this.student_id=student_id;
+        this.name=name;
+        this.address=address;
+        this.contact=contact;
+        this.date=date;
+        this.gender=gender;
+    }
+
+    public Student(String studentId, String name, String address, String contactNo, LocalDate dob, String gender) {
+    }
+
+    public Student(StudentDTO student_id) {
+    }
+
+    public Student(Student student_id) {
+    }
+
 
     public String getStudent_id() {
         return student_id;

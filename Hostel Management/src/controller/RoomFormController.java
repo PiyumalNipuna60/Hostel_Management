@@ -4,10 +4,11 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-
 
 
 public class RoomFormController {
@@ -26,23 +27,7 @@ public class RoomFormController {
     public JFXButton btnCancel;
     public JFXTextField txtSearch;
 
-//    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
-//    Pattern titlePattern = Pattern.compile("^[A-z ]{2,50}$");
-//    Pattern namePattern = Pattern.compile("^[A-z ]{3,50}$");
-//    Pattern addressPattern = Pattern.compile("^[A-z ]{3,60}$");
-//    Pattern cityPattern = Pattern.compile("^[A-z ]{3,60}$");
-//    Pattern provincePattern = Pattern.compile("^[A-z ]{3,60}$");
-//    Pattern postalCodePattern = Pattern.compile("^[0-9]{4,}$");
-
-//    private void storeValidations() {
-//
-//        map.put(txtRoomTypeID,);
-//        map.put(txtRoomType,);
-//        map.put(txtKeyMoney,);
-//        map.put(txtQty,);
-//    }
-
-//
+    //
 //    public void initialize() {
 //        btnAddRoom.setDisable(true);
 //        colId.setCellValueFactory(new PropertyValueFactory<>("room_Type_id"));
@@ -52,20 +37,47 @@ public class RoomFormController {
 //        colOption.setCellValueFactory(new PropertyValueFactory<>("btn"));
 //
 //    }
-        public void addStudentRoomOnAction (ActionEvent actionEvent){
-        }
+    public void addStudentRoomOnAction(ActionEvent actionEvent) {
+        String room_type_id = txtRoomTypeID.getText();
+        String type = txtRoomType.getText();
+        String key_money = txtKeyMoney.getText();
+        Integer qty = Integer.valueOf(txtQty.getText());
 
-        public void clearFOrmOnAction (ActionEvent actionEvent){
-        }
 
-        public void SearchMatchingResults (KeyEvent keyEvent){
+        if (!room_type_id.matches("[A-Za-z0-9 ]+")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid description").show();
+            txtRoomTypeID.requestFocus();
+            return;
+        } else if (!type.matches("^$")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid unit price").show();
+            txtRoomType.requestFocus();
+            return;
+        } else if (!key_money.matches("^$")) {
+            new Alert(Alert.AlertType.ERROR, "Invalid qty on hand").show();
+            txtKeyMoney.requestFocus();
+            return;
+//            } else if (!qty.matches("^$")) {
+//                new Alert(Alert.AlertType.ERROR, "Invalid qty on hand").show();
+//                txtQty.requestFocus();
+//                return;
         }
+    }
 
-        public void CloseOnAction (MouseEvent mouseEvent){
-        }
+    public void clearFOrmOnAction(ActionEvent actionEvent) {
+    }
+
+    public void SearchMatchingResults(KeyEvent keyEvent) {
+    }
+
+    public void CloseOnAction(MouseEvent mouseEvent) {
+    }
 
     public void ValidateFields(KeyEvent keyEvent) {
     }
+
+//    boolean existCustomer(String id) throws SQLException, ClassNotFoundException {
+//
+//    }
 }
 
 

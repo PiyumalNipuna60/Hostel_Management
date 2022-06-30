@@ -1,5 +1,6 @@
 package entity;
 
+import dto.RoomDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,13 @@ public class Room {
 
     public Room(String room_type_id, String type, String key_money, int qty) {
     }
+
+    public Room(RoomDTO room_id) {
+    }
+
+    public Room(Room room_type_id) {
+    }
+
 
     public String getRoom_type_id() {
         return room_type_id;

@@ -19,9 +19,13 @@ import javax.persistence.Id;
 @Entity
 public class User {
     @Id
+    private String id;
     private String nic;
     private String name;
     @Column(unique = true)
     private String userName;
     private String password;
+
+    public User(String id, String userName, String password) {
+    }
 }

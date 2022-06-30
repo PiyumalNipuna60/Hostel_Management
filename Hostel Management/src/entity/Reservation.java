@@ -9,6 +9,7 @@ import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.time.LocalDate;
 import java.util.Date;
 @AllArgsConstructor
 @Data
@@ -27,6 +28,9 @@ public class Reservation {
 
     @ManyToOne
     Student student_id;
+
+    public Reservation(String resId, LocalDate date, Student student, Room room_type_id, String status) {
+    }
 
     public String getRes_id() {
         return res_id;

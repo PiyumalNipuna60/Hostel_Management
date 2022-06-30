@@ -7,10 +7,10 @@ import entity.Room;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ReservationDAO extends CrudDAO<Reservation,String> {
-    boolean save(Reservation entity) throws ClassNotFoundException, SQLException;
+public interface ReservationDAO extends CrudDAO<Reservation ,String> {
+    Reservation find(String s) throws Exception;
 
-    List<Reservation> getMatchingResults(String search);
+    List<Reservation> findAll() throws Exception;
 
-    String getReservationId() throws Exception;
+    public String generateNewId()throws Exception;
 }
