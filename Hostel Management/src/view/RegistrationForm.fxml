@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
+   <children>
+      <ImageView fitHeight="587.0" fitWidth="1114.0" layoutY="9.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/2.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="61.0" layoutX="26.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="410.0" />
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="36.0" layoutY="43.0" prefHeight="38.0" prefWidth="183.0" text="Time">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="237.0" layoutY="43.0" prefHeight="38.0" prefWidth="183.0" text="Date">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="387.0" layoutX="123.0" layoutY="136.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="395.0" />
+      <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="158.0" layoutY="163.0" prefHeight="31.0" prefWidth="325.0" promptText="Student ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="158.0" layoutY="222.0" prefHeight="31.0" prefWidth="325.0" promptText="Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="158.0" layoutY="281.0" prefHeight="31.0" prefWidth="325.0" promptText="Address">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="158.0" layoutY="340.0" prefHeight="31.0" prefWidth="325.0" promptText="Contact No">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbGender" labelFloat="true" layoutX="158.0" layoutY="450.0" prefHeight="31.0" prefWidth="325.0" promptText="Gender" />
+      <JFXDatePicker fx:id="dPickDob" layoutX="158.0" layoutY="401.0" prefHeight="31.0" prefWidth="325.0" promptText="DOB" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="197.0" layoutX="591.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="395.0" />
+      <JFXComboBox fx:id="cmbRoomType" labelFloat="true" layoutX="624.0" layoutY="226.0" prefHeight="31.0" prefWidth="151.0" promptText="Room Type" />
+      <JFXDatePicker fx:id="dPickRegistrationDate" layoutX="624.0" layoutY="173.0" prefHeight="31.0" prefWidth="325.0" promptText="Registration Date" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="151.0" layoutX="591.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="395.0" />
+      <JFXComboBox fx:id="cmbPaymentType" labelFloat="true" layoutX="806.0" layoutY="400.0" prefHeight="31.0" prefWidth="151.0" />
+      <Label alignment="CENTER" layoutX="614.0" layoutY="397.0" prefHeight="38.0" prefWidth="151.0" text="Payment Type">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAmount" labelFloat="true" layoutX="806.0" layoutY="451.0" prefHeight="31.0" prefWidth="151.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="657.0" layoutY="453.0" prefHeight="38.0" prefWidth="108.0" text="Amount">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="657.0" layoutY="531.0" onAction="#btnRegisterOnAction" prefHeight="42.0" prefWidth="317.0" style="-fx-background-color: red;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="882.0" layoutY="60.0" onAction="#btnAddNewOnAction" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: green;" text="+ New" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <Line endX="49.0" endY="-33.0" layoutX="170.0" layoutY="125.0" startX="49.0" startY="-94.0" />
+      <JFXTextField fx:id="txtKeyMoney" labelFloat="true" layoutX="624.0" layoutY="274.0" prefHeight="31.0" prefWidth="325.0" promptText="Key Money (LKR)">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomTypeId" labelFloat="true" layoutX="806.0" layoutY="216.0" prefHeight="31.0" prefWidth="151.0" promptText="Room Type ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

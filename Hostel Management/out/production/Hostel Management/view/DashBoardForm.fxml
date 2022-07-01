@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAnchorPane" prefHeight="650.0" prefWidth="1405.0" style="-fx-background-color: #223300;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+<AnchorPane fx:id="mainAnchorPane" prefHeight="699.0" prefWidth="1405.0" style="-fx-background-color: #223300;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
     <children>
         <AnchorPane layoutX="295.0" prefHeight="646.0" prefWidth="1110.0" style="-fx-background-color: #223300;">
             <children>
@@ -28,9 +28,9 @@
                         <Font size="38.0" />
                     </font>
                 </TextField>
-                <AnchorPane fx:id="secondAnchorpane" layoutX="3.0" layoutY="112.0" prefHeight="526.0" prefWidth="1107.0">
+                <AnchorPane fx:id="secondAnchorpane" layoutX="3.0" layoutY="112.0" prefHeight="581.0" prefWidth="1107.0">
                <children>
-                  <ImageView fitHeight="538.0" fitWidth="1107.0" opacity="0.78" pickOnBounds="true" smooth="false">
+                  <ImageView fitHeight="587.0" fitWidth="1107.0" opacity="0.99" pickOnBounds="true" smooth="false">
                      <image>
                         <Image url="@assets/image/370516-PBSVZ6-916.jpg" />
                      </image>
@@ -40,7 +40,7 @@
         </AnchorPane>
         <AnchorPane layoutX="-11.0" prefHeight="646.0" prefWidth="314.0" style="-fx-background-color: #009432;">
             <children>
-                <ImageView fitHeight="650.0" fitWidth="306.0" layoutX="8.0" opacity="0.95" pickOnBounds="true">
+                <ImageView fitHeight="699.0" fitWidth="306.0" layoutX="8.0" opacity="0.95" pickOnBounds="true">
                     <image>
                         <Image url="@assets/image/44.jpg" />
                     </image>
@@ -78,22 +78,27 @@
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </JFXButton>
-                <JFXButton buttonType="RAISED" layoutX="76.0" layoutY="535.0" onAction="#LogoutOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="Logout" textFill="WHITE">
+                <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="608.0" onAction="#LogoutOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="Logout" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </JFXButton>
-                <Label layoutX="34.0" layoutY="603.0" text="Version 2.0.1" textFill="WHITE">
+                <Label layoutX="21.0" layoutY="655.0" text="Version 2.0.1" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
-            <JFXButton buttonType="RAISED" layoutX="39.0" layoutY="456.0" onAction="#KeyOnAction" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: #3e8027; -fx-background-radius: 50;" text="Key Money" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="504.0" onAction="#KeyOnAction" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: #3e8027; -fx-background-radius: 50;" text="Key Money" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="39.0" layoutY="409.0" onAction="#UserOnAction" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: #3e8027; -fx-background-radius: 50;" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="456.0" onAction="#RegistrationOnAction" prefHeight="39.0" prefWidth="234.0" style="-fx-background-color: #3e8027; -fx-background-radius: 50;" text="Registration" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

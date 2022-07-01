@@ -2,8 +2,12 @@
   <library name="mysql-connector-java-8.0.25">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-8.0.25.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/lib" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/fontawesomefx-8.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/lib" recursive="false" />
   </library>
 </component>

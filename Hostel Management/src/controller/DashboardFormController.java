@@ -22,7 +22,7 @@ public class DashboardFormController {
     public TextField txtTime;
     public AnchorPane secondAnchorpane;
 
-    public void initialize() {
+    public void initialize() throws IOException {
         //----------------------Set Date & time--------------------------------------------------------------
         try {
             new Timer(1000, e -> {
@@ -35,25 +35,23 @@ public class DashboardFormController {
         } catch (Exception exception) {
         }
 
+        URL resource = getClass().getResource("../view/HomeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        secondAnchorpane.getChildren().clear();
+        secondAnchorpane.getChildren().add(load);
+
 
     }
 
     public void studentOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/StudentForm.fxml");
+        URL resource = getClass().getResource("../view/StudentManageForm.fxml");
         Parent load = FXMLLoader.load(resource);
         secondAnchorpane.getChildren().clear();
         secondAnchorpane.getChildren().add(load);
     }
 
     public void RoomOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/RoomForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        secondAnchorpane.getChildren().clear();
-        secondAnchorpane.getChildren().add(load);
-    }
-
-    public void KeyOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/KeyPaymentForm.fxml");
+        URL resource = getClass().getResource("../view/RoomManageForm.fxml");
         Parent load = FXMLLoader.load(resource);
         secondAnchorpane.getChildren().clear();
         secondAnchorpane.getChildren().add(load);
@@ -78,9 +76,17 @@ public class DashboardFormController {
     }
 
     public void UserOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/UserManagementForm.fxml");
+        URL resource = getClass().getResource("../view/ManageUserForm.fxml");
         Parent load = FXMLLoader.load(resource);
         secondAnchorpane.getChildren().clear();
         secondAnchorpane.getChildren().add(load);
     }
+
+    public void RegistrationOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/RegistrationForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        secondAnchorpane.getChildren().clear();
+        secondAnchorpane.getChildren().add(load);
+    }
+
 }

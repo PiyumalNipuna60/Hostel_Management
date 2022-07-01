@@ -1,25 +1,22 @@
 package bo.custom;
 
-
-
 import bo.SuperBO;
 import dto.RoomDTO;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface RoomBO extends SuperBO {
-    public boolean addRoom(RoomDTO roomDTO) throws Exception;
 
-    public boolean updateRoom(RoomDTO roomDTO) throws Exception;
+    public boolean saveRooms(RoomDTO dto) throws SQLException, ClassNotFoundException;
 
-    public boolean deleteRoom(String id) throws Exception;
+    public boolean updateRooms(RoomDTO dto) throws SQLException, ClassNotFoundException;
 
-    public RoomDTO searchRoom(String id) throws Exception;
+    public List<RoomDTO> getAllRooms() throws SQLException, ClassNotFoundException;
 
-    public List<RoomDTO> LoadAllRoom() throws Exception;
+    public boolean deleteRoom(String typeId) throws SQLException, ClassNotFoundException;
 
-    public List<String> getAllRoomIds() throws Exception;
+    public List<String> getRoomTypes() throws SQLException,ClassNotFoundException;
 
-    public boolean AddNewRoomType(String id ,int qty) throws Exception;
-
+    public List<RoomDTO> getRoomId(String type) throws SQLException,ClassNotFoundException;
 }

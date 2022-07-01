@@ -1,12 +1,13 @@
 package view.tdm;
 
-import com.jfoenix.controls.JFXButton;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserTM {
-
-    private String nic;
-    private String name;
-    private String userName;
+    private String user_name;
     private String password;
-    private JFXButton btn;
 }

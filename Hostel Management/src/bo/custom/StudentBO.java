@@ -1,23 +1,15 @@
 package bo.custom;
 
-
 import bo.SuperBO;
 import dto.StudentDTO;
-import entity.Student;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface StudentBO extends SuperBO {
-    public boolean addStudent(StudentDTO studentDTO) throws Exception;
+    public List<StudentDTO> getAllStudents() throws SQLException, ClassNotFoundException;
 
-    public boolean updateStudent(StudentDTO studentDTO) throws Exception;
+    public boolean deleteStudent(String sId) throws SQLException, ClassNotFoundException;
 
-    public boolean deleteStudent(String id) throws Exception;
-
-    public StudentDTO searchStudent(String id) throws Exception;
-
-    public List<StudentDTO> LoadAllStudent() throws Exception;
-
-    public ArrayList<Student> getAllStudentIds() throws Exception;
+    boolean updateStudent(StudentDTO dto) throws SQLException, ClassNotFoundException;
 }

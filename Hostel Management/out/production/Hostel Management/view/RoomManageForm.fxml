@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomManageFormController">
+   <children>
+      <ImageView fitHeight="587.0" fitWidth="1107.0" opacity="0.92" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/1035.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblRoom" layoutX="150.0" layoutY="205.0" prefHeight="355.0" prefWidth="805.0">
+        <columns>
+          <TableColumn fx:id="colRoomTypeId" prefWidth="170.3333282470703" text="Room Type ID" />
+          <TableColumn fx:id="colType" prefWidth="227.6666717529297" text="Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="224.66668701171875" text="Key Money(LKR)" />
+            <TableColumn fx:id="colRoomsQty" prefWidth="183.33331298828125" text="Rooms QTY" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtRoomTypeId" labelFloat="true" layoutX="69.0" layoutY="133.0" prefHeight="42.0" prefWidth="161.0" promptText="Room Type ID" style="-fx-background-color: white; -fx-background-radius: 7;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtType" labelFloat="true" layoutX="252.0" layoutY="133.0" prefHeight="42.0" prefWidth="161.0" promptText="Type" style="-fx-background-color: white; -fx-background-radius: 7;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtKeyMoney" labelFloat="true" layoutX="439.0" layoutY="133.0" prefHeight="42.0" prefWidth="161.0" promptText="Key Money(LKR)" style="-fx-background-color: white; -fx-background-radius: 7;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRoomQty" labelFloat="true" layoutX="624.0" layoutY="133.0" prefHeight="42.0" prefWidth="153.0" promptText="Rooms QTY" style="-fx-background-color: white; -fx-background-radius: 7;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="880.0" layoutY="43.0" onAction="#btnAddNewOnAction" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: green;" text="+Add New" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="880.0" layoutY="132.0" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="848.0" layoutY="111.0" onAction="#btnDeleteOnAction" prefHeight="43.0" prefWidth="64.0" text="." textFill="#eb2323" />
+      <ImageView fitHeight="53.0" fitWidth="161.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/image/Screenshot2.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

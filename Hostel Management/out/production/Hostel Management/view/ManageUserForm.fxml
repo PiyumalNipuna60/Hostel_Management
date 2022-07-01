@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="516.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageUserFormController">
+   <children>
+      <FontAwesomeIconView fill="#eb2323" glyphName="TRASH" layoutX="636.0" layoutY="121.0" size="42" textAlignment="CENTER" wrappingWidth="52.14285659790039" />
+      <TableView fx:id="tblUser" layoutX="70.0" layoutY="195.0" prefHeight="278.0" prefWidth="622.0">
+         <columns>
+            <TableColumn fx:id="colUserId" prefWidth="174.0" text="UserID" />
+            <TableColumn fx:id="colUserName" prefWidth="236.0" text="UserName" />
+            <TableColumn fx:id="colPassword" prefWidth="211.0" text="Password" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="631.0" layoutY="85.0" onAction="#btnDeleteOnAction" prefHeight="43.0" prefWidth="64.0" text="." textFill="#eb2323" />
+      <JFXButton buttonType="RAISED" layoutX="583.0" layoutY="31.0" onAction="#btnAddNewOnAction" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: green;" text="+ New" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="566.0" layoutY="143.0" onAction="#btnSaveOnAction" prefHeight="42.0" prefWidth="126.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="198.0" layoutY="143.0" prefHeight="42.0" prefWidth="154.0" promptText="UserName">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="373.0" layoutY="143.0" prefHeight="42.0" prefWidth="154.0" promptText="Password">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserId" editable="false" labelFloat="true" layoutX="70.0" layoutY="143.0" prefHeight="42.0" prefWidth="105.0" promptText="UserID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

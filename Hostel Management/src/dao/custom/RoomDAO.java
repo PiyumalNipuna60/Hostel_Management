@@ -6,11 +6,8 @@ import entity.Room;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface RoomDAO extends CrudDAO <Room,String>{
-    Room find(String s) throws Exception;
+public interface RoomDAO extends CrudDAO<Room, String> {
+    public List<String> getRoomTypes() throws SQLException, ClassNotFoundException;
 
-    List<Room> findAll() throws Exception;
-
-    public List<String> getAllRoomIds() throws Exception;
-    public boolean addNewRoomType(String id, int qty);
+    public List<Room> getRoomId(String type) throws SQLException, ClassNotFoundException;
 }

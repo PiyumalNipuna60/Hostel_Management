@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="538.0" prefWidth="1107.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
-    <children>
-        <ImageView fitHeight="539.0" fitWidth="1107.0" opacity="0.97">
-            <image>
-                <Image url="@assets/image/370516-PBSVZ6-916.jpg" />
-            </image>
-        </ImageView>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="599.0" fitWidth="1118.0" layoutX="-5.0" layoutY="-5.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/image/Screenshot.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="44.5" endY="434.0" layoutX="509.0" layoutY="153.0" startX="44.0" startY="-152.0" />
+      <TableView fx:id="tblStudentReservation" layoutX="41.0" layoutY="100.0" prefHeight="448.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="153.0" text="Student ID" />
+          <TableColumn fx:id="colRoomType" prefWidth="160.0" text="Room Type" />
+            <TableColumn fx:id="colStatus" prefWidth="150.0" text="Status" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblKeyMoneyPendingK" layoutX="604.0" layoutY="100.0" prefHeight="448.0" prefWidth="464.0">
+         <columns>
+            <TableColumn fx:id="colStudentIdK" prefWidth="153.0" text="Student ID" />
+            <TableColumn fx:id="colRoomTypeK" prefWidth="160.0" text="Room Type" />
+            <TableColumn fx:id="colStatusK" prefWidth="150.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label ellipsisString="........" layoutX="34.0" layoutY="25.0" prefHeight="68.0" prefWidth="246.0" text="Student  Details" underline="true">
+         <font>
+            <Font name="Arial Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label ellipsisString="........" layoutX="604.0" layoutY="14.0" prefHeight="68.0" prefWidth="246.0" text="KeyMoney  List" underline="true">
+         <font>
+            <Font name="Arial Bold" size="29.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
